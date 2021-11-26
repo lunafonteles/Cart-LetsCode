@@ -1,0 +1,17 @@
+ol {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  text-align: end;
+  border: solid 2px white;
+  background-color: white;
+  justify-content: space-between;
+}
+
+a {
+  display: inline;
+  margin: 10px;
+  min-height: 50px;
+}

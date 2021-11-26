@@ -1,0 +1,42 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <div class="container">
+    <main>
+      <div class="cart">
+        <h2>Seu carrinho</h2>
+        <div *ngFor="let product of persistence.cart">
+          <!-- <img [src]="baseURL + product.image" /> -->
+          {{ product.name }} - R$ {{ product.price }}
+          <button #removeBt (click)="persistence.removeFromCart(product)">
+            Remover
+          </button>
+          <!-- <p>Valor Total: {{total}}</p> -->
+          <button (click)="finishPurchase()">Concluir compra</button>
+        </div>
+      </div>
+
+      <form [formGroup]="editRegister" (ngSubmit)="FormSubmit()">
+        <h2>Formulário de Cadastro</h2>
+        <div>
+          <label for="name">Nome</label>
+          <input type="text" required formControlName="name" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="text" required formControlName="email" />
+        </div>
+        <div>
+          <label for="phone">Telefone</label>
+          <input type="number" formControlName="phone" />
+        </div>
+        <div>
+          <label for="cpf">CPF</label>
+          <input type="number" required formControlName="cpf" />
+        </div>
+        <button type="submit" [disabled]="!editRegister.valid">Salvar</button>
+      </form>
+    </main>
+  </div>
+</body>

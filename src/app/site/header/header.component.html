@@ -1,0 +1,12 @@
+<header>
+  <nav>
+    <ol>
+      <li>
+        <input #searchInput type="text" placeholder="pesquisar no site" />
+        <button #searchButton (click)="search(searchInput)">Pesquisar</button>
+        <a routerLink="/home">Home</a>
+        <a routerLink="/checkout">Checkout</a>
+      </li>
+    </ol>
+  </nav>
+</header>

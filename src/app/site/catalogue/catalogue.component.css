@@ -1,0 +1,20 @@
+.container {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(5 50px);
+}
+
+img {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+}
+
+button {
+  text-align: center;
+  width: 200px;
+}
+
+/* .maxContainer {
+  display: inline-block;
+} */

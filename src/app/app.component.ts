@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './model/product';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Final-Project';
+
+    searchOnSite (event: any) {
+    if (event == Product.name) {
+      alert(Product);
+    }
+  }
 }

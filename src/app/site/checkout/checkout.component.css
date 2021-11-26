@@ -1,0 +1,49 @@
+body {
+  font: 100%/1.5 arial, verdana, tahoma;
+}
+
+.container {
+  width: 100%;
+  background-color: black;
+  max-width: 1200;
+}
+
+main {
+  height: 800px;
+  color: white;
+}
+
+div {
+  display: grid;
+  gap: 10px 10px;
+  grid-template-columns: repeat(6 10px);
+  grid-template-rows: repeat(4 150px);
+}
+
+form {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 40px;
+}
+
+.cart {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 40px;
+}
+
+/* ol {
+  grid-column: 1;
+  grid-row: 1;
+} */
+
+img {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+}
+
+button {
+  text-align: center;
+  width: 200px;
+}

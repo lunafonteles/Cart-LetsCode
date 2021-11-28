@@ -1,19 +1,21 @@
-.container {
+/* div {
   color: white;
-  display: grid;
-  grid-template-columns: repeat(5 50px);
+  display: inline;
+} */
+/* .container {
+  color: white;
+  display: inline;
 }
 
 img {
   width: 150px;
   height: 200px;
   margin: 10px;
-}
-
+} */
+/* 
 button {
-  text-align: center;
-  width: 200px;
-}
+  width: 175px;
+} */
 
 /* .maxContainer {
   display: inline-block;

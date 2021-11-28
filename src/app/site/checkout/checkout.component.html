@@ -7,12 +7,18 @@
       <div class="cart">
         <h2>Seu carrinho</h2>
         <div *ngFor="let product of persistence.cart">
-          <!-- <img [src]="baseURL + product.image" /> -->
-          {{ product.name }} - R$ {{ product.price }}
+          <img [src]="baseURL + product.image" />
+          {{ product.name }} - {{ product.price | currency: "BRL" }}
           <button #removeBt (click)="persistence.removeFromCart(product)">
             Remover
           </button>
-          <!-- <p>Valor Total: {{total}}</p> -->
+        </div>
+
+        <div>
+          Valor Total:
+          <p>
+            {{ cart | pipeSum }}
+          </p>
           <button (click)="finishPurchase()">Concluir compra</button>
         </div>
       </div>
@@ -29,13 +35,20 @@
         </div>
         <div>
           <label for="phone">Telefone</label>
-          <input type="number" formControlName="phone" />
+          <input type="text" formControlName="phone" />
         </div>
         <div>
           <label for="cpf">CPF</label>
-          <input type="number" required formControlName="cpf" />
+          <input type="text" required formControlName="cpf" />
         </div>
         <button type="submit" [disabled]="!editRegister.valid">Salvar</button>
+
+        <!-- <div *ngIf="name?.invalid">
+          <div *ngIf="name?.errors?.['required']">Nome obrigatório.</div>
+          <div *ngIf="name?.errors?.['minlength']">
+            Nome deve ter ao menos 3 caracteres
+          </div>
+        </div> -->
       </form>
     </main>
   </div>

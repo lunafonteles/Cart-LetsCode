@@ -4,6 +4,11 @@ img {
   margin: 10px;
 }
 
-.addToCart {
-  text-align: center;
+.container {
+  color: white;
+  display: inline;
 }
+/* 
+div {
+  flex-direction: row;
+} */

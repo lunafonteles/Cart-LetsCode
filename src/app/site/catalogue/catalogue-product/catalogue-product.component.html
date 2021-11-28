@@ -1,9 +1,11 @@
-<div #showGame>
-  <div>
-    <img [src]="baseURL + product.image" />
-    <p>{{ product.name }} - R$ {{ product.price }}</p>
-  </div>
+<div class="container" #showGame>
+  <img [src]="baseURL + product.image" />
+  <p>{{ product.name }} - {{ product.price | currency: "BRL" }}</p>
 </div>
-<button class="addToCart" #addToCartButton (click)="getData(showGame)">
+<button
+  class="addToCart"
+  #addToCartButton
+  (click)="persistence.addToCart(product)"
+>
   Adicionar ao carrinho
 </button>

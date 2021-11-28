@@ -1,3 +1,4 @@
+import { PipeSum } from './pipeSum';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     CheckoutComponent,
     CatalogueComponent,
-    CatalogueProductComponent
+    CatalogueProductComponent,
+    PipeSum
   ],
   imports: [
     BrowserModule,

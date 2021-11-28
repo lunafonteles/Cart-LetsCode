@@ -6,7 +6,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent  {
 
   cart: number = 0;
   products: number = 0;
@@ -14,9 +14,6 @@ export class HeaderComponent implements OnInit {
   static gameSearch = new EventEmitter();
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   search(input: any) {
     HeaderComponent.gameSearch.emit(input.value);

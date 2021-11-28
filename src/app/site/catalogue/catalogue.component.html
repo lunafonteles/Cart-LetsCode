@@ -1,22 +1,5 @@
 <body>
-  <!-- <div class="maxContainer"> -->
-  <div class="container" #gameOption *ngFor="let product of gamesCatalogue">
-    <img [src]="baseURL + product.image" />
-    {{ product.name }} - R$ {{ product.price }}
-    <button #addToCartButton (click)="persistence.addToCart(product)">
-      Adicionar ao carrinho
-    </button>
+  <div *ngFor="let product of filteredGames">
+    <app-catalogue-product [product]="product"></app-catalogue-product>
   </div>
-  <!-- </div> -->
 </body>
-
-<!-- <div>
-  <app-catalogue-product
-    [product]="gamesCatalogue[0]"
-    (addCartBt)="addToCart($event)"
-  ></app-catalogue-product
-  ><app-catalogue-product 
-    [product]="gamesCatalogue[1]"
-    (addCartBt)="addToCart($event)"
-  ></app-catalogue-product>
-</div> -->

@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class PersistenceService {
 
   static cart: Product[] = [];
-  static register: Register[] = [];
+  static register: Register = new Register('','','','');
   
   constructor() {
   }
@@ -22,6 +22,7 @@ export class PersistenceService {
     let index = this.cart.indexOf(product);
     this.cart.splice(index , 1);
     this.updateFromLocalStorage();
+    console.log(this.cart)
   }
 
   static addToCart(product: Product) {

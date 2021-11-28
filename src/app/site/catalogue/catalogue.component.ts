@@ -1,7 +1,6 @@
-import { PersistenceService } from './../../persistence.service';
 import { Component } from '@angular/core';
 import { ProductDBService } from 'src/app/product-db.service';
-
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-catalogue',
@@ -11,9 +10,16 @@ import { ProductDBService } from 'src/app/product-db.service';
 export class CatalogueComponent {
 
   baseURL: string = "../assets/"
-  gamesCatalogue = ProductDBService.gamesCatalogue;
-  persistence = PersistenceService;
+  filteredGames = ProductDBService.gamesCatalogue;
 
-  constructor() { }
+  constructor() {
+    HeaderComponent.gameSearch.subscribe(this.applyFilter);
+   }
+
+   applyFilter(filter: string){
+    this.filteredGames = ProductDBService.gamesCatalogue.filter(
+      game => game.name.toLowerCase().includes(filter.toLowerCase()));
+      console.log(this.filteredGames);
+   }
 
 }
